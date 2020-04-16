@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>detran</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        #img{
+            width: 300px;
+            height: 300px;
+         
+              
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Sistemas de multas</h1>
+    velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h
+    <input type="button" value="verificar" onclick="calcular()">
+
+    <div id="res" class="img" >
+        <img src="img/imagem-1.jpg">
+
+    </div>
+ 
+    <script>
+           
+        function calcular() {
+            var txtv = document.querySelector('input#txtvel')
+            var res = document.querySelector('div#res')
+            var vel = Number(txtvel.value)
+            res.innerHTML = `<p>sua velocidade atual e de <strong>${vel}</strong>Km/h</p>`
+            if (vel > 60) {
+                res.innerHTML += '<p>voce esta<strong> multado </strong> por excesso de velocidade</p>'
+                document.querySelector('img').src = "img/imagem-2.jpg"  
+            }
+                
+            res.innerHTML += '<p>Dirija sempre com o cinto de segurança'
+        }
+    </script> 
+</body>
+</html>
+
+*/document.querySelector('img').addEventListener('click' , clicar)
+function clicar(){
+    document.querySelector('img').src = "img/portfolio-3.jpg"
+}  
